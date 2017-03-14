@@ -14,7 +14,7 @@
     $scope.posts = [];
 
     $scope.validate = function (tag) {
-      var polishSigns = ['ą', 'ę', 'ó', 'ż', 'ź', 'ć', 'ś', 'ń', 'ł', '#'];
+      var prohibitedSigns = ['ą', 'ę', 'ó', 'ż', 'ź', 'ć', 'ś', 'ń', 'ł', '#'];
 
       var characters = tag.split('');
 
@@ -22,13 +22,13 @@
 
 
       for(var i = 0; i <= characters.length; i++) {
-        if(polishSigns.indexOf(characters[i]) >= 0) {
+        if(prohibitedSigns.indexOf(characters[i]) >= 0) {
           isValid = false;
         }
       }
 
       if(!isValid) {
-        alert("Polish and # signs are prohibited!");
+        alert("Polish signs and # sign are prohibited!");
         $scope.tag = '';
       }
     };
