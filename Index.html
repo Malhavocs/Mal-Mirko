@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mal-Mirko</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-app="mirko" ng-controller="SearchBarController" novalidate>
+<div id="background"></div>
+<div id="main" ng-controller="SearchBarController">
+    <div id="header" >
+      <div id="logo"></div>
+      <div id="searchBar">
+          <input type="text"
+                 id="txtSearch"
+                 placeholder="    Wpisz tag"
+                 ng-model="tag"
+                 ng-change="validate(tag)"
+                 ng-keydown="$event.which === 13 && searchTag()"
+          />
+          <input type="button"
+                 id="btnSearch"
+                 class="buttons"
+                 value="search"
+                 ng-click="searchTag()"
+                 ng-keydown=""
+          />
+          <input type="button"
+               id="btnTop"
+               class="dropButton"
+               value="top"
+               ng-click="loadTopTags()"
+          />
+      </div>
+    </div>
+    <div id="tagsContainer">
+        <div class="tags" ng-repeat="tag in tags | limitTo: 15">
+            <span ng-click="searchTag(tag.tag)">{{tag.tag}}</span>
+        </div>
+    </div>
+    <div id="contentContainer">
+    <div ng-if="post.embed.preview" class="content" ng-repeat="post in posts">
+        <img ng-src="{{post.embed.preview}}" ng-click="openUrl(post.embed.url)"/>        
+        <div>
+            <span>{{post.author}}</span>
+            <img ng-src="{{post.author_avatar_med}}"/>
+            <span>{{post.date}}</span>
+        </div>
+    </div>
+    </div>
+    <div id="footer">
+        <input type="button"
+               id="more-button"
+               value="more"
+               ng-click="loadMore()"
+        />
+    </div>
+</div>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="md5.min.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="MirkoModule.js"></script>
+<script type="text/javascript" src="app/MirkoDataService.js"></script>
+<script type="text/javascript" src="app/SearchBarController.js"></script>
+
+</body>
+</html>
