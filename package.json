@@ -1,0 +1,22 @@
+{
+  "name": "mal-mirko",
+  "version": "1.0.0",
+  "description": "Before using Mal-Mirko app you need to add Mal-Mirkos (or other wykop app) appkey and secret to the config.js file, respectively.",
+  "main": "MirkoModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malhavocs/Mal-Mirko.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malhavocs/Mal-Mirko/issues"
+  },
+  "homepage": "https://github.com/Malhavocs/Mal-Mirko#readme",
+  "dependencies": {
+    "angular": "^1.6.3"
+  }
+}
