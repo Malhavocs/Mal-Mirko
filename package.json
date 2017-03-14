@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Malhavocs/Mal-Mirko#readme",
   "dependencies": {
-    "angular": "^1.6.3"
+    "angular": "^1.6.3",
+    "md5": "^2.2.1"
   }
 }
