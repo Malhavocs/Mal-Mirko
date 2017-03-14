@@ -1,2 +1,0 @@
-var APPKEY = "";
-var SECRET = "";
