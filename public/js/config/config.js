@@ -1,0 +1,2 @@
+var APPKEY = "";
+var SECRET = "";
