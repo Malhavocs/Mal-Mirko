@@ -2,9 +2,9 @@
 
 Before using Mal-Mirko app you need to do two things.
 
-First, you'll need to install angular in your destination folder with command below.
+First, you'll need to install package.json with command below.
 
-		 npm install angular --save
+		 npm install
 
 After that just add Mal-Mirkos (or other wykop app) appkey and secret to the config.js file, respectively.
 
